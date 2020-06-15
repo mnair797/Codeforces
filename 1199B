@@ -1,0 +1,5 @@
+l,h=input().split()
+l=int(l)
+h=int(h)
+ans=(abs((l*l)-(h*h)))/(2.0*l)
+print (ans)
