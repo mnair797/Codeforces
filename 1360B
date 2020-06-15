@@ -1,0 +1,16 @@
+num=int(input())
+final=[0]*num
+for i in range (num):
+    a=int(input())
+    arr=[0]*a
+    arr=input().split()
+    for k in range (a):
+        arr[k]=int(arr[k])
+    arr.sort()
+    mini=100000000000000
+    for y in range (a-1):
+        if arr[y+1]-arr[y]<mini:
+            mini=arr[y+1]-arr[y]
+    final[i]=mini
+for p in range (num):
+    print (final[p])
