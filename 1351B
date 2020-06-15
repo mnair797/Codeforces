@@ -1,0 +1,16 @@
+def squares (a,b,c,d):
+    if max(a,b)==max(c,d) and min(a,b)+min(c,d)==max(a,b):
+        return ("Yes")
+    return ("No")
+t=int(input())
+arr=[0]*t
+for i in range (t):
+    a,b=input().split()
+    c,d=input().split()
+    a=int(a)
+    b=int(b)
+    c=int(c)
+    d=int(d)
+    arr[i]=squares(a,b,c,d)
+for z in range (t):
+    print (arr[z])
