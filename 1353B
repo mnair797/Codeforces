@@ -1,0 +1,24 @@
+t=int(input())
+arr=[0]*t
+for i in range (t):
+    n,k=input().split()
+    n=int(n)
+    k=int(k)
+    a=[0]*n
+    b=[0]*n
+    a=input().split()
+    b=input().split()
+    total=0
+    for j in range (n):
+        a[j]=int(a[j])
+        b[j]=int(b[j])
+        total=total+a[j]
+
+    a.sort()
+    b.sort()
+    for p in range (k):
+        if b[n-p-1]>a[p]:
+            total=total-a[p]+b[n-p-1]
+    arr[i]=total
+for j in range (t):
+    print (arr[j])
