@@ -1,0 +1,22 @@
+num=int(input())
+string=input()
+arr=[0]*num
+start=0
+counter=0
+for t in range (num):
+    if string[t] !="x":
+        arr[counter]=start
+        counter+=1
+        start=0
+    else:
+        start+=1
+if string.count('x')==0:
+    print (0)
+else:
+    arr[counter]=start
+    total=0
+    for k in range (num):
+        if arr[k] !=0:
+            if arr[k]>=3:
+                total=total+(arr[k]-2)
+    print (total)
