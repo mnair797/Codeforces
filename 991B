@@ -1,0 +1,24 @@
+num=int(input())
+arr=[0]*num
+arr=input().split()
+for i in range (num):
+    arr[i]=int(arr[i])
+possible=4.5*num
+total=sum(arr)
+if total>possible:
+    print (0)
+else:
+    arr2=[0]*num
+    for i in range (num):
+        arr2[i]=5-arr[i]
+    arr2.sort(reverse=True)
+    count=0
+    for t in range (num):
+        if total>=possible:
+            break
+        total=total+arr2[t]
+        count+=1
+        
+        if total>=possible:
+            break
+    print (count)
