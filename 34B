@@ -1,0 +1,15 @@
+n,m=input().split()
+n=int(n)
+m=int(m)
+arr=[0]*n
+arr=input().split()
+for i in range (n):
+    arr[i]=int(arr[i])
+arr.sort()
+total=0
+count=0
+for k in range (n):
+    if arr[k]<0 and count<m:
+        total=total+abs(arr[k])
+        count+=1
+print (total)
