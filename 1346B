@@ -1,0 +1,16 @@
+t=int(input())
+for k in range (t):
+    n,k1,k2=input().split()
+    n=int(n)
+    k1=int(k1)
+    k2=int(k2)
+    s=input()
+    m = 0
+    prev = 0
+    for c in (s):
+        if c=="1":
+            prev=min(k2-prev,k1)
+            m+=prev
+        else:
+            prev=0
+    print (m)
