@@ -1,0 +1,29 @@
+t=int(input())
+for i in range (t):
+    num=int(input())
+    ans=0
+    if num==2:
+        ans="No"
+    elif num%4==2:
+        ans="No"
+    else:
+        ans="Yes"
+        arr=[0]*num
+        count=0
+        total=0
+        for k in range (2,num+2,+2):
+            arr[count]=k
+            count+=1
+            total+=k
+        for l in range (1,num-2,+2):
+            arr[count]=l
+            count+=1
+            total=total-l
+        arr[num-1]=total
+        
+    if ans=="No":
+        print ("NO")
+    else:
+        print ("YES")
+        for p in range (num):
+            print (arr[p], end=" ")
