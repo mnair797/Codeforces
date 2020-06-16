@@ -1,0 +1,29 @@
+t=int(input())
+for i in range (t):
+    num=int(input())
+    even=0
+    odd=0
+    if num%2==1:
+        indexe=(num+1)//2
+        indexo=num-indexe
+    else:
+        indexe=num//2
+        indexo=num//2
+    arr=[0]*num
+    arr=input().split()
+    different=0
+    for k in range (num):
+        arr[k]=int(arr[k])
+        if arr[k]%2==0:
+            even+=1
+        else:
+            odd+=1
+        if k%2==0 and arr[k]%2==1:
+            different+=1
+        if k%2==1 and arr[k]%2==0:
+            different+=1
+    print (even,odd,indexe,indexo,different)
+    if even !=indexe or odd !=indexo:
+        print (-1)
+    else:
+        print (different//2)
