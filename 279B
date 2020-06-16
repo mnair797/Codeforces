@@ -1,0 +1,17 @@
+num,t=input().split()
+num=int(num)
+t=int(t)
+arr=[0]*num
+arr=input().split()
+for i in range (num):
+    arr[i]=int(arr[i])
+ans=0
+total=0
+left=0
+for right in range (num):
+    total+=arr[right]
+    while total>t:
+        total-=arr[left]
+        left+=1
+    ans=max(ans,right-left+1)
+print (ans)
