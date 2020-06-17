@@ -1,0 +1,8 @@
+num=input()
+if int(num)<10:
+    print (int(num)*11)
+else:
+    temp=""
+    for i in range (len(num)-1,-1,-1):
+        temp=temp+num[i]
+    print (num+temp)
