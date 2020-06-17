@@ -1,0 +1,18 @@
+s=input()
+l=0
+u=0
+if len(s)%2==0:
+    for i in range (len(s)):
+        if(s[i]=='L'):
+            l+=1
+        if(s[i]=='R'):
+            l-=1
+        if(s[i]=='U'):
+            u+=1
+        if(s[i]=='D'):
+           u-=1
+    ans=abs(u)+abs(l)
+    print (ans//2)
+else:
+    print (-1)
+        
