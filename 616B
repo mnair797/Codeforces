@@ -1,0 +1,16 @@
+r,c=input().split()
+r=int(r)
+c=int(c)
+matrix=[0]*r
+for i in range (r):
+    matrix[i]=[0]*c
+for k in range (r):
+    matrix[k]=input().split()
+    for p in range (c):
+        matrix[k][p]=int(matrix[k][p])
+maxi=-1
+for d in range (r):
+    matrix[d].sort()
+    if matrix[d][0]>maxi:
+        maxi=matrix[d][0]
+print (maxi)
