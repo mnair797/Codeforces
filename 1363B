@@ -1,0 +1,26 @@
+t=int(input())
+for i in range (t):
+    string=input()
+    totalzero=0
+    totalone=0
+    for k in range (len(string)):
+        if string[k]=="0":
+            totalzero+=1
+        if string[k]=="1":
+            totalone+=1
+    firstpartzero=0
+    secondpartzero=0
+    firstpartone=0
+    secondpartone=0
+    maxizero=10000000000000
+    maxione=1000000000000
+    for y in range (len(string)):
+        if string[y]=="0":
+            firstpartzero+=1
+        if string[y]=="1":
+            firstpartone+=1
+        secondpartzero=totalzero-firstpartzero
+        secondpartone=totalone-firstpartone
+        maxizero=min(maxizero, secondpartone+firstpartzero)
+        maxione=min(maxione, secondpartzero+firstpartone)
+    print (min(maxione,maxizero))
