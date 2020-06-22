@@ -1,0 +1,14 @@
+n,k=input().split()
+n=int(n)
+k=int(k)
+arr=[0]*n
+arr=input().split()
+for i in range (n):
+    arr[i]=int(arr[i])
+length=n-k+1
+window=sum(arr[:n-k+1])
+total=window
+for t in range (1,k,+1):
+    window=window-arr[t-1]+arr[t+(n-k)]
+    total=total+window
+print (total/(n-k+1))
