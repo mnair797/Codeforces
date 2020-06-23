@@ -1,0 +1,26 @@
+num=int(input())
+string=input()
+arr=[0]*num
+current=""
+count=0
+for j in range (len(string)):
+    if string[j] !=",":
+        current=current+string[j]
+    else:
+        arr[count]=int(current)
+        count+=1
+        current=""
+arr[count]=int(current)
+count=0
+for y in range (num):
+    for p in range (y+1,num,+1):
+        if arr[y]>arr[p]:
+            if arr[y]%arr[p] !=0:
+                count+=1
+        else:
+            if arr[p]%arr[y] !=0:
+                count+=1
+if count==0:
+    print ("FRIENDS")
+else:
+    print ("NOT FRIENDS")
