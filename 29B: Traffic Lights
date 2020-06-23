@@ -1,0 +1,16 @@
+l,d,v,g,r=input().split()
+l=int(l)
+d=int(d)
+v=int(v)
+g=int(g)
+r=int(r)
+ans=0
+k=d/(v*(g+r))
+if d< ((k * (r + g) + g) * v):
+    ans+=(d/v)
+else:
+    ans += (k + 1) * (r + g)
+ans += (l - d) / v;
+print (ans)
+    
+    
