@@ -1,9 +1,0 @@
-string=input()
-arr=[0]*128
-for r in range (len(string)):
-    arr[ord(string[r])]+=1
-total=0
-myset=set(string)
-for val in myset:
-    total=total+(arr[ord(val)]**2)
-print (total)
