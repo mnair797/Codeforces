@@ -1,0 +1,13 @@
+bijous=0
+vp=int(input())
+vd=int(input())
+t=int(input())
+f=int(input())
+c=int(input())
+current=0
+if vp<vd:
+    current=vd * vp * t / (vd-vp)
+    while(current<c):
+        current = vd * (current + vp * (f + current / vd)) / (vd-vp)
+        bijous+=1
+print (bijous)
