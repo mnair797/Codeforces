@@ -1,0 +1,15 @@
+a,b,c,d=input().split()
+x,y=input().split()
+a=int(a)
+b=int(b)
+c=int(c)
+d=int(d)
+x=int(x)
+y=int(y)
+p=abs(a-c)
+q=abs(b-d)
+
+if (abs(p/x-q/y)%2 or p%x or q%y)==False:
+    print ("Yes")
+else:
+    print ("No")
