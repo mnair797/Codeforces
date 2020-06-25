@@ -1,0 +1,13 @@
+from math import gcd
+arr=[0]*3
+num=int(input())
+a = [num, num-1, num-2] 
+lcm = a[0]
+if num==1:
+    print (1)
+elif num==2:
+    print (2)
+else:
+    for i in a[1:]:
+      lcm = lcm*i//gcd(lcm, i)
+    print (lcm)
