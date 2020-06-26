@@ -4,7 +4,6 @@ s="yes"
 j=0
 for c in t:
     j = p.find(c, j)
-    print (j)
     if j == -1:
         s = 'no'
         break
