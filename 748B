@@ -1,0 +1,27 @@
+s = input()
+t = input()
+w1 = set()
+w2=set()
+fifa=0
+for i in range(len(s)):
+    l1 = min(s[i],t[i])
+    l2 = max(s[i], t[i])
+    if (s[i] in w2 or t[i] in w2) and (l1, l2) not in w1:
+        fifa=-1
+        break
+    else:
+        w2.add(s[i])
+        w2.add(t[i])
+        w1.add((l1, l2))
+result=[0]*len(s)
+count=0
+if fifa==-1:
+    print (-1)
+else:
+    for k in w1:
+        if k[0] !=k[1]:
+            count+=1
+    print (count)
+    for i in w1:
+        if i[0] !=i[1]:
+            print (i[0],i[1])
