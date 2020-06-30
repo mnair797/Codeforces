@@ -1,0 +1,19 @@
+def main(d,t):
+    for i in d:
+        t += i[1]
+        if t < -2:
+            return("NO")
+    return ("YES")
+d = []
+n = int(input())
+for i in range(n):
+    a,b=input().split()
+    a=int(a)
+    b=int(b)
+    d.append([a,-1])
+    d.append([b,1])
+ 
+d.sort()
+t = 0
+ans=main(d,t)
+print (ans)
