@@ -1,0 +1,18 @@
+s = input()
+a = list(input())
+a.append('')
+count = 0
+ 
+while len(set(a)) == 3:
+    for i in range(len(a)):
+        if a[i] == 'D':
+            if count < 0:
+                a[i] = ''
+            count+=1
+        if a[i] == 'R':
+            if count > 0:
+                a[i] = ''
+            count-=1
+for ss in set(a):
+    if ss:
+        print(ss)
