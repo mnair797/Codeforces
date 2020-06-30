@@ -1,0 +1,20 @@
+n,k,l=input().split()
+n=int(n)
+k=int(k)
+l=int(l)
+a=[0]*(n*k)
+a=input().split()
+for i in range (n*k):
+    a[i]=int(a[i])
+a.sort()
+wrong=0
+ans=0
+for i in range(n*k-1,-1,-1):
+    wrong+=1
+    if a[i]-a[0]<=l and wrong>=k:
+        ans+=a[i]
+        wrong-=k
+if wrong>0:
+    print(0)
+else:
+    print(ans)
