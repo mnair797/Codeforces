@@ -1,0 +1,10 @@
+#First Soution
+n=int(input())
+print (((n**3)-n)//3-2)
+
+#Second Solution
+n=int(input())
+total=0
+for i in range (n,2,-1):
+    total=total+((i)*(i-1))
+print (total)
