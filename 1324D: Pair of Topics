@@ -1,0 +1,21 @@
+n = int(input())
+x=[0]*n
+y=[0]*n
+x=input().split()
+y=input().split()
+a=[0]*n
+for i in range (n):
+    x[i]=int(x[i])
+    y[i]=int(y[i])
+    a[i]=x[i]-y[i]
+a.sort()
+l = 0
+r = n - 1
+ans = 0
+while l < r:
+    if a[l] + a[r] > 0 :
+        ans = ans  + r - l
+        r =  r - 1
+    else:
+        l = l  + 1
+print (ans)
