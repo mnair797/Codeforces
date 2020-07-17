@@ -1,0 +1,16 @@
+from decimal import * 
+num = int(input())
+a = list(map(Decimal,input().split()))
+b = list(map(Decimal,input().split()))
+d={}
+ans=0
+extra=0
+for i in range(num):
+    if a[i]==0 and b[i]==0:
+        extra+=1
+    elif a[i]==0:
+        continue
+    else:
+        aa = b[i]/a[i]
+        d[aa] = d.get(aa,0)+1
+print(max(list(d.values())+[0])+extra)
